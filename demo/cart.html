@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车 - 京购商城</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="site-top">
+    <div class="container site-top-inner">
+      <div class="site-top-left">
+        <a href="index.html">返回首页</a>
+      </div>
+      <div class="site-top-right">
+        <a href="#">我的订单</a>
+        <a href="#">客户服务</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header site-header-simple">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">京</span>
+        <span class="logo-text">京购商城</span>
+      </a>
+      <h1 class="page-title">购物车</h1>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <div class="container">
+      <div class="cart-table" id="cartTable">
+        <div class="cart-empty" id="cartEmpty">
+          <p>购物车还是空的，去首页逛逛吧</p>
+          <a href="index.html" class="btn-primary">去购物</a>
+        </div>
+        <div class="cart-list hidden" id="cartList"></div>
+      </div>
+
+      <div class="cart-summary hidden" id="cartSummary">
+        <div class="summary-left">
+          <label><input type="checkbox" id="selectAll" checked> 全选</label>
+          <button type="button" class="btn-text" id="clearCart">清空购物车</button>
+        </div>
+        <div class="summary-right">
+          <span>已选 <strong id="selectedCount">0</strong> 件商品</span>
+          <span>合计：<strong class="total-price" id="totalPrice">0.00</strong></span>
+          <button type="button" class="btn-checkout" id="checkoutBtn">去结算</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer-mini">
+    <div class="container footer-copy">
+      <p>京购商城 Demo &copy; 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

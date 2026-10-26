@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>京购商城 - 演示首页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶栏 -->
+  <div class="site-top">
+    <div class="container site-top-inner">
+      <div class="site-top-left">
+        <span class="location">送至：北京</span>
+        <a href="#">你好，请登录</a>
+        <a href="#" class="highlight">免费注册</a>
+      </div>
+      <div class="site-top-right">
+        <a href="#">我的订单</a>
+        <a href="#">我的京购</a>
+        <a href="#">企业采购</a>
+        <a href="#">客户服务</a>
+        <a href="#">网站导航</a>
+        <a href="#">手机京购</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 头部：Logo + 搜索 + 购物车 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">京</span>
+        <span class="logo-text">京购商城</span>
+      </a>
+
+      <div class="search-area">
+        <div class="search-box">
+          <input type="text" placeholder="搜索商品、品牌" id="searchInput">
+          <button type="button" id="searchBtn">搜索</button>
+        </div>
+        <div class="hot-keywords">
+          <a href="#">手机</a>
+          <a href="#">笔记本</a>
+          <a href="#">耳机</a>
+          <a href="#">空调</a>
+          <a href="#">零食</a>
+        </div>
+      </div>
+
+      <a href="cart.html" class="cart-btn">
+        <span class="cart-icon">购</span>
+        我的购物车
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 主导航区 -->
+  <nav class="main-nav">
+    <div class="container nav-inner">
+      <!-- 左侧分类 -->
+      <div class="category-menu" id="categoryMenu">
+        <div class="category-title">全部商品分类</div>
+        <ul class="category-list">
+          <li><a href="#">家用电器</a></li>
+          <li><a href="#">手机 / 运营商 / 数码</a></li>
+          <li><a href="#">电脑 / 办公 / 文具</a></li>
+          <li><a href="#">家居 / 家具 / 家装</a></li>
+          <li><a href="#">男装 / 女装 / 童装</a></li>
+          <li><a href="#">美妆 / 个护清洁</a></li>
+          <li><a href="#">食品 / 酒类 / 生鲜</a></li>
+          <li><a href="#">运动 / 户外 / 乐器</a></li>
+        </ul>
+      </div>
+
+      <!-- 中间轮播 -->
+      <div class="banner-area">
+        <div class="banner-slider" id="bannerSlider">
+          <div class="banner-slide active" data-index="0">
+            <div class="banner-content banner-1">
+              <h2>618 年中大促</h2>
+              <p>全场满减，限时抢购</p>
+            </div>
+          </div>
+          <div class="banner-slide" data-index="1">
+            <div class="banner-content banner-2">
+              <h2>数码新品首发</h2>
+              <p>手机电脑低至 5 折</p>
+            </div>
+          </div>
+          <div class="banner-slide" data-index="2">
+            <div class="banner-content banner-3">
+              <h2>家电以旧换新</h2>
+              <p>最高补贴 2000 元</p>
+            </div>
+          </div>
+        </div>
+        <div class="banner-dots" id="bannerDots"></div>
+        <button class="banner-arrow banner-prev" id="bannerPrev" type="button">&lt;</button>
+        <button class="banner-arrow banner-next" id="bannerNext" type="button">&gt;</button>
+      </div>
+
+      <!-- 右侧快捷入口 -->
+      <div class="quick-panel">
+        <div class="user-panel">
+          <div class="avatar">用</div>
+          <p>Hi，欢迎来到京购</p>
+          <div class="user-btns">
+            <a href="#" class="btn-primary">登录</a>
+            <a href="#" class="btn-outline">注册</a>
+          </div>
+        </div>
+        <div class="quick-links">
+          <a href="#"><span>秒</span>秒杀</a>
+          <a href="#"><span>券</span>优惠券</a>
+          <a href="#"><span>拼</span>拼购</a>
+          <a href="#"><span>充</span>充值</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 秒杀区 -->
+  <section class="seckill-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="seckill-title">京东秒杀</h2>
+        <div class="countdown">
+          <span>距结束</span>
+          <span class="time" id="countdown">02:00:00</span>
+        </div>
+        <a href="#" class="more-link">更多秒杀 &gt;</a>
+      </div>
+      <div class="product-row" id="seckillProducts"></div>
+    </div>
+  </section>
+
+  <!-- 推荐商品楼层 -->
+  <section class="floor-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>为你推荐</h2>
+        <a href="#" class="more-link">查看更多 &gt;</a>
+      </div>
+      <div class="product-grid" id="recommendProducts"></div>
+    </div>
+  </section>
+
+  <!-- 热销楼层 -->
+  <section class="floor-section floor-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>热销榜单</h2>
+        <a href="#" class="more-link">查看更多 &gt;</a>
+      </div>
+      <div class="product-grid" id="hotProducts"></div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-service">
+        <div class="service-item"><strong>多</strong>品类齐全，轻松购物</div>
+        <div class="service-item"><strong>快</strong>多仓直发，极速配送</div>
+        <div class="service-item"><strong>好</strong>正品行货，精致服务</div>
+        <div class="service-item"><strong>省</strong>天天低价，畅选无忧</div>
+      </div>
+      <div class="footer-links">
+        <div class="link-col">
+          <h4>购物指南</h4>
+          <a href="#">购物流程</a>
+          <a href="#">会员介绍</a>
+          <a href="#">生活旅行</a>
+        </div>
+        <div class="link-col">
+          <h4>配送方式</h4>
+          <a href="#">上门自提</a>
+          <a href="#">211 限时达</a>
+          <a href="#">配送服务查询</a>
+        </div>
+        <div class="link-col">
+          <h4>支付方式</h4>
+          <a href="#">货到付款</a>
+          <a href="#">在线支付</a>
+          <a href="#">分期付款</a>
+        </div>
+        <div class="link-col">
+          <h4>售后服务</h4>
+          <a href="#">售后政策</a>
+          <a href="#">价格保护</a>
+          <a href="#">退款说明</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>本页面为演示用途的静态首页，非真实电商平台。</p>
+        <p>京购商城 Demo &copy; 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
